@@ -1,0 +1,80 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hero Combat Helper</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+
+  <script
+    src="js/vendor/jquery/jquery-3.6.2.min.js"
+    integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA="
+    crossorigin="anonymous"></script>
+  <script src="js/vendor/jquery/ui/jquery-ui.min.js"
+          integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous"
+          referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="js/vendor/jquery/ui/darkness/jquery-ui.min.css"
+        integrity="sha512-p1d6H09ljWDOV2QwnG9MqYe2VKz/EOw0DJ6PRsl5SvIWY0Pxt0bnwl3+57OrQDMWQyyJ+XnsEq4Hlhl+GdoVKQ==" crossorigin="anonymous"
+        referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="js/vendor/jquery/ui/darkness/theme.min.css"
+        integrity="sha512-eXdD71dLQXd6oQX8IqiACvyrCCScA004dNt2c2fFA2ZMuYEESTbJsfDvarWho8CX1iBs1GOvwfBpFsS2QjdnoQ==" crossorigin="anonymous"
+        referrerpolicy="no-referrer"/>
+
+  <link rel="stylesheet" href="css/stat_block.css">
+</head>
+
+<body>
+
+<div style="background: black; color:white;">
+  <h1>
+    Character
+  </h1>
+  <div id="container">
+    <div id="Label_B">B:</div>
+    <div id="body">
+      <div class="progress-label">8/11</div>
+    </div>
+    <span id="LabeL_S">S:</span>
+    <div id="stun">
+      <div class="progress-label">16/20</div>
+    </div>
+    <span id="Label_E">E:</span>
+    <div id="end">
+      <div class="progress-label">29/30</div>
+    </div>
+  </div>
+  <p>
+    <br>
+    <button type="button" id="setBody">
+      Change Body
+    </button>
+    <button type="button" id="setStun">
+      Change Stun
+    </button>
+    <button type="button" id="setEnd">
+      Change End
+    </button>
+  </p>
+</div>
+
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

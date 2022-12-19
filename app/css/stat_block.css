@@ -1,0 +1,79 @@
+.ui-progressbar {
+  position: relative;
+}
+
+#body {
+  border-color: hsl(0deg 100% 50%);
+  background: hsl(0deg 100% 25%);
+}
+
+#body .ui-progressbar-value {
+  background: hsl(0deg 100% 50%);
+  border-right: 1px solid white;
+}
+
+#stun {
+  border-color: hsl(120deg 100% 50%);
+  background: hsl(120deg 100% 25%);
+}
+
+#stun .ui-progressbar-value {
+  background: hsl(120deg 100% 50%);
+  border-right: 1px solid white;
+}
+
+#end {
+  border-color: hsl(240deg 100% 50%);
+  background: hsl(240deg 100% 25%);
+}
+
+#end .ui-progressbar-value {
+  background: hsl(240deg 100% 50%);
+  border-right: 1px solid white;
+}
+
+.progress-label {
+  position: absolute;
+  left: 50%;
+  top: 4px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #000;
+}
+
+#container {
+  padding: 5px;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 3px 3px;
+  grid-template-areas:
+    "Label_B Value_B"
+    "Label_S Value_S"
+    "Label_E Value_E";
+  align-items: center;
+  align-content: center;
+}
+
+.Label_B {
+  grid-area: Label_B;
+}
+
+.body {
+  grid-area: Value_B;
+}
+
+.Label_S {
+  grid-area: Label_S;
+}
+
+.stun {
+  grid-area: Value_S;
+}
+
+.Label_E {
+  grid-area: Label_E;
+}
+
+.end {
+  grid-area: Value_E;
+}

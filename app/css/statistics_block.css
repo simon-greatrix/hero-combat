@@ -1,0 +1,187 @@
+
+#container {
+  padding: 5px;
+  display: grid;
+  grid-template-columns: min-content min-content min-content min-content;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 3px 3px;
+  grid-template-areas:
+    "Heading_Value Heading_Name Heading_Points Heading_Roll"
+    "Value_STR Name_STR Points_STR Roll_STR"
+    "Value_DEX Name_DEX Points_DEX Roll_DEX"
+    "Value_CON Name_CON Points_CON Roll_CON"
+    "Value_INT Name_INT Points_INT Roll_INT"
+    "Value_EGO Name_EGO Points_EGO Roll_EGO"
+    "Value_PRE Name_PRE Points_PRE Roll_PRE"
+    "Value_OCV Name_OCV Points_OCV Skip"
+    "Value_DCV Name_DCV Points_DCV Skip"
+    "Value_OMCV Name_OMCV Points_OMCV Skip"
+    "Value_DMCV Name_DMCV Points_DMCV Skip"
+    "Value_SPD Name_SPD Points_SPD Skip"
+    "Value_PD Name_PD Points_PD Skip"
+    "Value_ED Name_ED Points_ED Skip"
+    "Value_REC Name_REC Points_REC Skip"
+    "Value_END Name_END Points_END Skip"
+    "Value_BODY Name_BODY Points_BODY Skip"
+    "Value_STUN Name_STUN Points_STUN Skip"
+    "Skip2 Skip2 Points_Total Skip";
+  align-items: center;
+  align-content: center;
+}
+
+#Value_STR {
+  grid-area: Value_STR;
+}
+#Name_STR {
+  grid-area: Name_STR;
+}
+#Points_STR {
+  grid-area: Points_STR;
+}
+#Value_DEX {
+  grid-area: Value_DEX;
+}
+#Name_DEX {
+  grid-area: Name_DEX;
+}
+#Points_DEX {
+  grid-area: Points_DEX;
+}
+#Value_CON {
+  grid-area: Value_CON;
+}
+#Name_CON {
+  grid-area: Name_CON;
+}
+#Points_CON {
+  grid-area: Points_CON;
+}
+#Value_INT {
+  grid-area: Value_INT;
+}
+#Name_INT {
+  grid-area: Name_INT;
+}
+#Points_INT {
+  grid-area: Points_INT;
+}
+#Value_EGO {
+  grid-area: Value_EGO;
+}
+#Name_EGO {
+  grid-area: Name_EGO;
+}
+#Points_EGO {
+  grid-area: Points_EGO;
+}
+#Value_PRE {
+  grid-area: Value_PRE;
+}
+#Name_PRE {
+  grid-area: Name_PRE;
+}
+#Points_PRE {
+  grid-area: Points_PRE;
+}
+#Value_OCV {
+  grid-area: Value_OCV;
+}
+#Name_OCV {
+  grid-area: Name_OCV;
+}
+#Points_OCV {
+  grid-area: Points_OCV;
+}
+#Value_DCV {
+  grid-area: Value_DCV;
+}
+#Name_DCV {
+  grid-area: Name_DCV;
+}
+#Points_DCV {
+  grid-area: Points_DCV;
+}
+#Value_OMCV {
+  grid-area: Value_OMCV;
+}
+#Name_OMCV {
+  grid-area: Name_OMCV;
+}
+#Points_OMCV {
+  grid-area: Points_OMCV;
+}
+#Value_DMCV {
+  grid-area: Value_DMCV;
+}
+#Name_DMCV {
+  grid-area: Name_DMCV;
+}
+#Points_DMCV {
+  grid-area: Points_DMCV;
+}
+#Value_SPD {
+  grid-area: Value_SPD;
+}
+#Name_SPD {
+  grid-area: Name_SPD;
+}
+#Points_SPD {
+  grid-area: Points_SPD;
+}
+#Value_PD {
+  grid-area: Value_PD;
+}
+#Name_PD {
+  grid-area: Name_PD;
+}
+#Points_PD {
+  grid-area: Points_PD;
+}
+#Value_ED {
+  grid-area: Value_ED;
+}
+#Name_ED {
+  grid-area: Name_ED;
+}
+#Points_ED {
+  grid-area: Points_ED;
+}
+#Value_REC {
+  grid-area: Value_REC;
+}
+#Name_REC {
+  grid-area: Name_REC;
+}
+#Points_REC {
+  grid-area: Points_REC;
+}
+#Value_END {
+  grid-area: Value_END;
+}
+#Name_END {
+  grid-area: Name_END;
+}
+#Points_END {
+  grid-area: Points_END;
+}
+#Value_BODY {
+  grid-area: Value_BODY;
+}
+#Name_BODY {
+  grid-area: Name_BODY;
+}
+#Points_BODY {
+  grid-area: Points_BODY;
+}
+#Value_STUN {
+  grid-area: Value_STUN;
+}
+#Name_STUN {
+  grid-area: Name_STUN;
+}
+#Points_STUN {
+  grid-area: Points_STUN;
+}
+#Points_Total {
+  grid-area: Points_Total;
+}
