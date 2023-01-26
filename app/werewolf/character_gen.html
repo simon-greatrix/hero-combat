@@ -1,0 +1,428 @@
+<!doctype html>
+<html>
+<head>
+  <title>Simon's Werewolf Character Generator</title>
+  <style>
+    th { text-align: left }
+    span.dots { font-family: monospace;}
+  </style>
+</head>
+<body>
+<h1>Werewolf Character Generator</h1>
+
+<h1>Nature</h1>
+<table>
+  <tr>
+    <th>Breed</th>
+    <td id="lblBreed"></td>
+  </tr>
+  <tr>
+    <th>Auspice</th>
+    <td id="lblAuspice"></td>
+  </tr>
+  <tr>
+    <th>Tribe</th>
+    <td id="lblTribe"></td>
+  </tr>
+</table>
+
+<h1>Attributes</h1>
+<h2>Physical</h2>
+<table>
+  <tr>
+    <th>Strength</th>
+    <td id="lblStrength"></td>
+  </tr>
+  <tr>
+    <th>Dexterity</th>
+    <td id="lblDexterity"></td>
+  </tr>
+  <tr>
+    <th>Stamina</th>
+    <td id="lblStamina"></td>
+  </tr>
+</table>
+
+<h2>Social</h2>
+<table>
+  <tr>
+    <th>Charisma</th>
+    <td id="lblCharisma"></td>
+  </tr>
+  <tr>
+    <th>Manipulation</th>
+    <td id="lblManipulation"></td>
+  </tr>
+  <tr>
+    <th>Appearance</th>
+    <td id="lblAppearance"></td>
+  </tr>
+</table>
+
+<h2>Mental</h2>
+<table>
+  <tr>
+    <th>Perception</th>
+    <td id="lblPerception"></td>
+  </tr>
+  <tr>
+    <th>Intelligence</th>
+    <td id="lblIntelligence"></td>
+  </tr>
+  <tr>
+    <th>Wits</th>
+    <td id="lblWits"></td>
+  </tr>
+</table>
+
+<h1>Abilities</h1>
+<h2>Talents</h2>
+<table>
+  <tr>
+    <th>Alertness</th>
+    <td id="lblAlertness"></td>
+  </tr>
+  <tr>
+    <th>Athletics</th>
+    <td id="lblAthletics"></td>
+  </tr>
+  <tr>
+    <th>Brawl</th>
+    <td id="lblBrawl"></td>
+  </tr>
+  <tr>
+    <th>Dodge</th>
+    <td id="lblDodge"></td>
+  </tr>
+  <tr>
+    <th>Empathy</th>
+    <td id="lblEmpathy"></td>
+  </tr>
+  <tr>
+    <th>Expression</th>
+    <td id="lblExpression"></td>
+  </tr>
+  <tr>
+    <th>Intimidation</th>
+    <td id="lblIntimidation"></td>
+  </tr>
+  <tr>
+    <th>Primal-Urge</th>
+    <td id="lblPrimal-Urge"></td>
+  </tr>
+  <tr>
+    <th>Streetwise</th>
+    <td id="lblStreetwise"></td>
+  </tr>
+  <tr>
+    <th>Subterfuge</th>
+    <td id="lblSubterfuge"></td>
+  </tr>
+</table>
+
+<h2>Skills</h2>
+<table>
+  <tr>
+    <th>Animal Ken</th>
+    <td id="lblAnimal-Ken"></td>
+  </tr>
+  <tr>
+    <th>Drive</th>
+    <td id="lblDrive"></td>
+  </tr>
+  <tr>
+    <th>Etiquette</th>
+    <td id="lblEtiquette"></td>
+  </tr>
+  <tr>
+    <th>Firearms</th>
+    <td id="lblFirearms"></td>
+  </tr>
+  <tr>
+    <th>Melee</th>
+    <td id="lblMelee"></td>
+  </tr>
+  <tr>
+    <th>Leadership</th>
+    <td id="lblLeadership"></td>
+  </tr>
+  <tr>
+    <th>Performance</th>
+    <td id="lblPerformance"></td>
+  </tr>
+  <tr>
+    <th>Repair</th>
+    <td id="lblRepair"></td>
+  </tr>
+  <tr>
+    <th>Stealth</th>
+    <td id="lblStealth"></td>
+  </tr>
+  <tr>
+    <th>Survival</th>
+    <td id="lblSurvival"></td>
+  </tr>
+</table>
+
+<h2>Knowledge</h2>
+<table>
+  <tr>
+    <th>Computer</th>
+    <td id="lblComputer"></td>
+  </tr>
+  <tr>
+    <th>Enigmas</th>
+    <td id="lblEnigmas"></td>
+  </tr>
+  <tr>
+    <th>Investigation</th>
+    <td id="lblInvestigation"></td>
+  </tr>
+  <tr>
+    <th>Law</th>
+    <td id="lblLaw"></td>
+  </tr>
+  <tr>
+    <th>Linguistics</th>
+    <td id="lblLinguistics"></td>
+  </tr>
+  <tr>
+    <th>Medicine</th>
+    <td id="lblMedicine"></td>
+  </tr>
+  <tr>
+    <th>Occult</th>
+    <td id="lblOccult"></td>
+  </tr>
+  <tr>
+    <th>Politics</th>
+    <td id="lblPolitics"></td>
+  </tr>
+  <tr>
+    <th>Rituals</th>
+    <td id="lblRituals"></td>
+  </tr>
+  <tr>
+    <th>Science</th>
+    <td id="lblScience"></td>
+  </tr>
+</table>
+
+<h1>Gifts</h1>
+<div id="divGifts"></div>
+
+<h1>Rage</h1>
+<span id="lblRage"></span>
+
+<h1>Gnosis</h1>
+<span id="lblGnosis"></span>
+
+<h1>Willpower</h1>
+<span id="lblWillpower"></span>
+
+
+<script>
+
+  function nextDouble() {
+    return Math.random();
+  }
+
+  function setText(lbl, txt) {
+    document.getElementById(lbl).innerHTML = txt;
+  }
+
+  function setDots(lbl, val) {
+    setText(lbl, "<span class=\"dots\">" + ("&#9679;".repeat(val)) + ("&#9675;".repeat(5 - val)) + "</span>&nbsp;"+val);
+  }
+
+  function setXDots(lbl, val) {
+    setText(lbl, "<span class=\"dots\">" + ("&#9679;".repeat(val)) + ("&#9675;".repeat(10 - val)) + "</span>&nbsp;"+val);
+  }
+
+  function shuffle(v1, v2, v3) {
+    let tmp = [v1, v2, v3];
+    let p = [
+      [0, 1, 2], [0, 2, 1],
+      [1, 0, 2], [1, 2, 0],
+      [2, 0, 1], [2, 1, 0]
+    ][Math.trunc(6 * nextDouble())];
+    return [tmp[p[0]], tmp[p[1]], tmp[p[2]]];
+  }
+
+  const allGifts = [
+    "Persuasion", "Scent Of Man", "Create Element", "Sense Wyrm", "Heightened Senses", "Leaping",
+    "Blur Of The Milky Eye", "Open Seal", "Scent of Running Water",
+    "Mother's Touch", "Spirit Speech",
+    "Resist Pain", "Scent Of The True Form", "Truth Of Gaia",
+    "Beast Speech", "Call Of The Wyld", "Mindspeak",
+    "Inspiration", "Razor Claws", "Falling Touch",
+    "Cooking", "Scent Of Sweet Honey",
+    "Control Simple Machine"
+  ];
+  let gifts = [];
+
+  let rand = nextDouble();
+  const breedId = rand < 0.475 ? 0 : (rand < 0.95 ? 2 : 1);
+  const breed = ["HOMID", "METIS", "LUPUS"][breedId];
+  let gnosis = [1, 3, 5][breedId];
+  gifts.push([["Persuasion", "Scent Of Man"], ["Create Element", "Sense Wyrm"], ["Heightened Senses", "Leaping"]][breedId][Math.trunc(2 * nextDouble())]);
+  setText("lblBreed", breed);
+  console.log("Breed is "+breed);
+
+  const auspiceId = Math.trunc(nextDouble() * 5);
+  const auspice = ["New Moon (Ragabash)", "Crescent Moon (Theurge)", "Half Moon (Philodox)", "Gibbous Moon (Galiard)", "Full Moon (Ahroun)"][auspiceId];
+  let rage = auspiceId + 1;
+  setText("lblAuspice", auspice);
+  console.log("Auspice is "+auspice);
+  gifts.push(
+    [
+      ["Blur Of The Milky Eye", "Open Seal", "Scent of Running Water"],
+      ["Mother's Touch", "Sense Wyrm", "Spirit Speech"],
+      ["Resist Pain", "Scent Of The True Form", "Truth Of Gaia"],
+      ["Beast Speech", "Call Of The Wyld", "Mindspeak"],
+      ["Inspiration", "Razor Claws", "Falling Touch"]
+    ][auspiceId][Math.trunc(3 * nextDouble())]
+  );
+
+  let tribeId = nextDouble() < 0.5 ? 0 : 1;
+  setText("lblTribe", ["Bone Gnawer", "Glass Walker"][tribeId]);
+  console.log("Tribe is "+tribeId);
+  let willpower = [4,3][tribeId];
+
+  let newGift;
+  do {
+    newGift = [
+      ["Cooking", "Scent Of Sweet Honey"],
+      ["Persuasion", "Control Simple Machine"]
+    ][tribeId][Math.trunc(2 * nextDouble())];
+  } while (gifts.includes(newGift));
+  gifts.push(newGift);
+
+  const statList = [
+    [ "Strength" , "Dexterity", "Stamina" ],
+    [ "Charisma", "Manipulation", "Appearance" ],
+    [ "Perception", "Intelligence", "Wits" ]
+  ];
+  const statsAll = statList.flat(1);
+  console.log("All stats are: "+statsAll);
+  const statValues = {};
+  for (const s of statsAll) {
+    statValues[s] = 1;
+  }
+
+  let spend = shuffle(7,5,3);
+  for(const s0 of statList) {
+    let p = spend.pop();
+    while( p>0 ) {
+      p--;
+      let r, s;
+      do {
+        r = Math.trunc(3 * nextDouble());
+        s = s0[r];
+      } while (statValues[s]>=5);
+      statValues[s]++;
+      console.log("Stat "+s+" : "+statValues[s]);
+    }
+  }
+
+  const abilityList = [
+    [ "Alertness", "Athletics", "Brawl", "Dodge", "Empathy", "Expression", "Intimidation", "Primal-Urge", "Streetwise", "Subterfuge"],
+    [ "Animal-Ken", "Drive", "Etiquette", "Firearms", "Melee", "Leadership", "Performance", "Repair", "Stealth", "Survival" ],
+    [ "Computer", "Enigmas", "Investigation", "Law", "Linguistics", "Medicine", "Occult", "Politics", "Rituals", "Science" ]
+  ];
+  const excludedLupus = [
+    "Drive", "Etiquette", "Firearms", "Computer", "Law", "Linguistics", "Medicine", "Politics", "Science"
+  ]
+  const abilityAll = abilityList.flat(1);
+  const abilityValues = {};
+  for(const s of abilityAll) {
+    abilityValues[s] = 0;
+  }
+  spend = shuffle(13,9,5);
+  for(const s0 of abilityList) {
+    let p = spend.pop();
+    while( p>0 ) {
+      p--;
+      let r, s;
+      do {
+        r = Math.trunc(10 * nextDouble());
+        s = s0[r];
+      } while (abilityValues[s]>=5 || (breedId===2 && excludedLupus.includes(s)));
+      abilityValues[s]++;
+      console.log("Ability "+s+" : "+abilityValues[s]);
+    }
+  }
+
+  let freePoints = 15;
+  if( breedId===2 ) {
+    abilityValues["Linguistics"]++;
+    freePoints -= 2;
+  }
+  if( breedId===0 ) {
+    gnosis ++;
+    freePoints -= 2;
+  }
+  while( freePoints>0 ) {
+    let c = Math.trunc(6 * nextDouble());
+    console.log("Freeby points= "+freePoints+" choice="+c);
+    if( c===0 && freePoints>=7 ) {
+      freePoints -= 7;
+      let r;
+      do {
+        r = Math.trunc(allGifts.length * nextDouble());
+      } while ( gifts.includes(allGifts[r]));
+      console.log("Freeby gift: "+r);
+      gifts.push(allGifts[r]);
+    }
+    if( c===1 && freePoints>=5 ) {
+      freePoints -= 5;
+      let r;
+      do {
+        r = statsAll[ Math.trunc(9*nextDouble())];
+      } while ( statValues[r] === 5 );
+      console.log("Freeby stat: "+r);
+      statValues[r]++;
+    }
+    if( c===2 && freePoints>=2 ) {
+      freePoints -= 2;
+      let r;
+      do {
+        r = abilityAll[ Math.trunc(30*nextDouble())];
+      } while ( abilityValues[r] === 5 );
+      console.log("Freeby ability: "+r);
+      abilityValues[r]++;
+    }
+    if( c===3 && freePoints>=2 && gnosis<10 ) {
+      console.log("Freeby gnosis");
+      freePoints-=2;
+      gnosis++;
+    }
+    if( c===4 && rage<10 ) {
+      console.log("Freeby rage");
+      freePoints--;
+      rage++;
+    }
+    if( c===5 && willpower<10 ) {
+      console.log("Freeby willpower");
+      freePoints--;
+      willpower++;
+    }
+  }
+
+  rand = nextDouble();
+
+  for(const s of statsAll) {
+    console.log("Setting "+s+" to "+statValues[s]);
+    setDots("lbl"+s, statValues[s]);
+  }
+  for(const s of abilityAll) {
+    console.log("Setting "+s+" to "+abilityValues[s]);
+    setDots("lbl"+s, abilityValues[s]);
+  }
+  setText("divGifts", "<ul><li>" + gifts.join("</li><li>") + "</li></ul>");
+  setXDots("lblRage", rage);
+  setXDots("lblGnosis", gnosis);
+  setXDots("lblWillpower", willpower);
+</script>
+</body>
+</html>
